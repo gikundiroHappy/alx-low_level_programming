@@ -1,21 +1,26 @@
 #include "main.h"
+
 /**
- * jack_bauer - prints every minute of the day 00:00 to 23:59
- * @void - no argument
+ * jack_bauer - print time table in this format HH:MM
+ * Return: the sum of two numbers
  */
 void jack_bauer(void)
 {
-	int i, j;
+	int i, j, a, b, c, d;
 
 	for (i = 0; i < 24; i++)
 	{
 		for (j = 0; j < 60; j++)
 		{
-			_putchar(i / 10 + '0');
-			_putchar(i % 10 + '0');
+			a = i / 10;
+			b = i % 10;
+			c = j / 10;
+			d = j % 10;
+			_putchar(a + '0');
+			_putchar(b + '0');
 			_putchar(':');
-			_putchar(j / 10 + '0');
-			_putchat(j % 10 + '0');
+			_putchar(c + '0');
+			_putchat(d + '0');
 			_putchar('\n');
 		}
 	}
