@@ -2,6 +2,7 @@
 
 /**
  * main - fizzBuzz
+ *
  * Description: prints numbers from 1 to 100
  * Fizz for multiples of 3, Buzz for multiples of 5 and
  * FizzBuzz for multiples of both
@@ -20,7 +21,7 @@ int main(void)
 			else if (i % 5 == 0)
 				printf("Buzz");
 			else
-				print("%d", i);
+				printf("%d", i);
 			if (i < 100)
 				printf(" ");
 		}
