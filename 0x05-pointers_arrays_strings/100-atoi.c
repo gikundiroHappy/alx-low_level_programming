@@ -24,7 +24,7 @@ int _atoi(char *s)
 				break;
 			}
 		}
-		i++
+		i++;
 	}
 	return (num * sign);
 }
