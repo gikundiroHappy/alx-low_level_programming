@@ -3,52 +3,42 @@
 
 /**
  * print_buffer - prints a buffer
- * @b: char
- * @size: int
- * Return :void
+ * @b: buffer
+ * @size: size of buffer.
+ * Return : no return
  */
 void print_buffer(char *b, int size)
 {
-	int x, i;
+	int j, k, l;
 
-	for (x = 0; x < size; x += 10)
+	if (size <= 0)
+		printf("\n");
+	else
 	{
-		printf("%08x: ", x);
-	}
-
-		for (i = 0; i < 10; i++)
+		for (j = 0; j < size; j += 10)
 		{
-			if ((i + x) >= size)
+			printf("%.8x:", j);
+			for (k = j; k < j + 10; k++)
 			{
-				printf(" ");
-			}
-			else
-			{
-				printf("%02x", *(b + i + x));
-			}
-			if ((i % 2) != 0 && i != 0)
-			{
-				printf(" ");
-			}
-		}
-		for (i = 0; i < 10; i++)
-		{
-			if ((i + x) >= size)
-			{
-				break;
-			}
-			else if ((*(b + i + x) >= 31 && *(b + i + x) <= 126)
-					{
-					printf("%c", *(b + i + x));
-					}
-					else
-					{
+				if (k % 2 == 0)
 					printf(" ");
-					}
-					}
-					if (x >= size)
-					continue;
-					printf("\n");
-					}
-					if (size <= 0)
-					printf("\n");
+				if (k < size)
+					printf("%.2x", *(b + k));
+				else
+					printf(" ");
+			}
+			printf(" ");
+			for (l = j; l < j + 10; l++)
+			{
+				if (l >= size)
+					break;
+				if (*(b + l) < 32 || *(b + l) > 126)
+					printf("%c", '.');
+				else
+					printf("%c", *(b + l));
+			}
+			printf("\n");
+		}
+	}
+}
+
