@@ -1,14 +1,14 @@
 #include "main.h"
-
 /**
- * infinite_add - add two integer
- * @n1: char1
- * @n2: char2
- * @r: char3
- * @size_r: int
- * Return: value
+ * infinite_add - adds two numbers
+ * @n1: first number
+ * @n2: second number
+ * @r: result
+ * @size_r: result lenght
+ * Return: sum
+ *
  */
-char *infinite_add(char *n1, char *n2, char r, int size_r)
+char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
 	int i, j, k, l, m, n;
 
