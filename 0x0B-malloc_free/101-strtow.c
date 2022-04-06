@@ -8,7 +8,7 @@
  */
 int wrdcnt(char *s)
 {
-	in i, n = 0;
+	int i, n = 0;
 
 	for (i = 0; s[i]; i++)
 	{
@@ -31,7 +31,7 @@ int wrdcnt(char *s)
  */
 char **strtow(char *str)
 {
-	int i, j, l, n = 0, ch = 0;
+	int i, j, k, l, n = 0, ch = 0;
 	char **x;
 
 	if (str == NULL || *str == '\0')
