@@ -8,7 +8,7 @@
  * @n: number of bytes of s2 to copy
  * Return: char pointer to newly allocate
  */
-char *string_nconcat(char *s1, char *s2, unsigned int n)
+char *string_nconca:(char *s1, char *s2, unsigned int n)
 {
 	unsigned int i, j, k;
 	char *s;
